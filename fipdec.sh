@@ -1,3 +1,27 @@
-z="
-";yz='" | ';MBz=' "Th';BBz='d '\''#';gz='t';Fz=' Deo';rz='then';mz='| [[';qz=']]';iz='[ -n';VBz='eal ';kz='rget';QBz='70% ';hz='if [';az=' -p ';OBz='ool ';pBz='ctly';pz='get ';oz='$tar';xz='"$ta';aBz='ols ';bBz='By P';oBz='orre';KBz='TE :';sBz='fi';Qz='ls -';CBz=''\'' | ';HBz='====';ABz='tr -';NBz='is t';fz='arge';Nz='ry L';Zz='read';Hz='cato';uz=' :'\''';GBz=' "==';Mz='ecto';Yz='-N';Kz='le &';JBz=' "NO';UBz='nd r';nBz='ut C';iBz='ener';Uz='tori';DBz='tail';Rz='-gro';vz='sort';FBz=' && ';Cz='echo';fBz='else';tz='sult';lBz='ease';Iz='r'\''';jBz=' woi';Az='clea';SBz='ce t';Vz='es-f';dz='me :';PBz='has ';RBz='chan';nz=' -f ';qBz=']'\''';ZBz=' '\''To';bz='"Fil';cBz='hynX';Tz='irec';rBz='exit';Sz='up-d';Oz='ists';LBz='"';cz='e Na';sz=' '\''Re';Gz='bfus';YBz='ss."';lz=' ]] ';TBz='o fi';XBz='ddre';Wz='irst';hBz='ng b';Lz=' Dir';ez=' " t';Bz='r';Dz=' '\''Fa';WBz='IP A';Ez='keIP';gBz=' '\''Ya';wz=' -n ';Pz=' :"';Xz=' -1 ';EBz=' -13';IBz='==="';Jz=' "Fi';dBz='#491';eBz='2'\''';jz=' $ta';kBz=' [Pl';mBz=' Inp';
-eval "$Az$Bz$z$Cz$Dz$Ez$Fz$Gz$Hz$Iz$z$Cz$z$Cz$z$Cz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$z$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$z$Cz$z$Zz$az$bz$cz$dz$ez$fz$gz$z$hz$iz$jz$kz$lz$mz$nz$oz$pz$qz$z$rz$z$Cz$z$Cz$sz$tz$uz$z$vz$wz$xz$kz$yz$ABz$BBz$CBz$DBz$EBz$FBz$Cz$z$Cz$GBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$IBz$z$Cz$JBz$KBz$LBz$z$Cz$MBz$NBz$OBz$PBz$QBz$RBz$SBz$TBz$UBz$VBz$WBz$XBz$YBz$z$Cz$GBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$HBz$IBz$z$Cz$ZBz$aBz$bBz$cBz$dBz$eBz$z$Cz$z$fBz$z$Az$Bz$z$Cz$gBz$hBz$iBz$jBz$kBz$lBz$mBz$nBz$oBz$pBz$qBz$z$rBz$z$sBz"
+#!/bin/bash
+
+clear
+echo 'FakeIP Deobfuscator'
+echo
+echo
+echo "File & Directory Lists :"
+ls --group-directories-first -1 -N
+echo
+read -p "File Name : " target
+if [[ -n $target ]] | [[ -f $target ]]
+then
+echo
+echo 'Result :'
+sort -n "$target" | sed '/#/d' && echo # sed -e "s/[^ a-zA-Z1-9']//g" -e 's/ \+/ /' && echo
+echo "Total Line : $(wc -l $target | sed 's/[^1-9]//g')"
+echo "========================================="
+echo "NOTE :"
+echo "This tool has 70% chance to find real IP Address."
+echo "========================================="
+echo 'This Tool Originally By PhynX#4912'
+echo
+else
+clear
+echo '[Please Input Correctly]'
+exit
+fi
