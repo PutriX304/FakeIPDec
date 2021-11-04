@@ -33,4 +33,3 @@ jobs:
         tag_name: "v1.0.0"
         files: ./dist/fipdec.exe
         body_path: CHANGELOG.md
-        token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
