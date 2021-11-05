@@ -17,11 +17,6 @@ for line in open(file):
     if not li.startswith("#") and not li.startswith("//"):
         if "growtopia" in li:
             print(line.rstrip())
-file = open(file, "r")
-line_count = 0
-for line in file:
-    if line != "\n":
-        line_count += 1
-file.close()
-print("\nTotal Line: "+str(line_count))
+tl = open(file, "r").readlines()
+print("\nTotal Line: "+str(len(tl)))
 print("==================================")
